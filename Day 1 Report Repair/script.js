@@ -12,6 +12,7 @@ let boolean = true;
 let x = 0;
 
 // Time to complete: 2927.450927734375 ms, 2900.48779296875 ms, 2821.9140625 ms
+// When console closed: 756.3349609375 ms, 764.8359375 ms, 839.509033203125 ms
 while (boolean){
     for(let i = 0; i < expenses.length; i++){
         first = expenses[current]
@@ -27,6 +28,7 @@ while (boolean){
 }
 
 // Time to complete: 2902.777099609375 ms, 2844.994140625 ms, 2914.8212890625 ms
+// When console closed: 839.509033203125 ms, 834.916015625 ms, 701.480224609375 ms
 while (boolean){
     while(x <= expenses.length - 1){
         first = expenses[current]
@@ -44,18 +46,19 @@ while (boolean){
 }
 
 
-//Time to complete: 5893.145263671875 ms, timer: 5918.64404296875 ms, 5697.221923828125 ms
+// Time to complete: 5893.145263671875 ms, timer: 5918.64404296875 ms, 5697.221923828125 ms
+// When console closed: 850.50927734375 ms, 924.55908203125 ms, 842.318115234375 ms
 for(let i = 0; i < expenses.length; i++){
     for(let x = 0; x < expenses.length; x++){
         first = expenses[i];
         second = expenses[x];
         result = parseInt(first) + parseInt(second);
         console.log(`${result}`)
-        console.log(`${first} + ${second} = ${result}`)
         if(result == 2020){
             correctAdd.push(`${first} + ${second} = ${result}`);
             correctMultiply.push(`${first} * ${second} = ${parseInt(first) * parseInt(second)}`)
         }
     }
 }
+
 console.timeEnd("timer"); 
